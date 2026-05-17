@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH --job-name=lab_3.cpp
+#SBATCH --time=0:05:00
+#SBATCH --ntasks-per-node=16
+#SBATCH --partition batch
+
+module load intel/mpi5
+mpirun -r ssh ./lab_3 1000
